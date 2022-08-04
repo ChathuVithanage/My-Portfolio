@@ -3,11 +3,10 @@
     padding: 0;
     font-family: sans-serif;
 }
-.hero{
+/*.hero{
     width: 100%;
     height: 100vh;
-    background-color: #FEECFC;
-}
+}*/
 /*position - fixed,absolute,relative,sticky,static*/
 /* display - block,inline,inline-block,flex,grid,inline-grid,flexbox*/
 .navbar{
@@ -41,11 +40,63 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: #333;
+    font-weight: bold;
 }
-.images{
-    width: 75%;
-    height: 75vh;
-    margin: auto;
+nav ul li a:hover{
+    color: deeppink;
+}
+/*home section styling*/
+.Home{
     display: flex;
-    align-items: normal;
+    background-color: #FEECFC;
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    margin-left: 8%;
+    margin-top: 13%;
+}
+.container h3{
+    font-size: 25px;
+    font-family: IBM Plex Serif;
+    margin-bottom: 20px;
+}
+.container h5{
+    font-size: 15px;
+    font-family: Gideon Roman;
+}
+.container h1{
+    font-size: 45px;
+    font-family: Kaisei Opti;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.container p{
+    font-family: Inter;
+    font-size: 100%;
+    padding: 20px;
+}
+.profile{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 45px;
+    right: 50px;
+}
+.frame{
+    height: 10.5cm;
+    width: 9cm;
+    position: absolute;
+    left: 52%;
+    bottom: 90px;
+    transform: translateX(-50%);
+    transition: bottom 1s,left 1s;
+}
+.girl{
+    height: 75%;
+    position: absolute;
+    left: 64%;
+    bottom: 15px;
+    transform: translateX(-60%);
+    transition: bottom 1s,left 1s;
 }
