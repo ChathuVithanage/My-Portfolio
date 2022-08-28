@@ -149,40 +149,135 @@ nav ul li a:hover{
         transform: translateY(1rem);
     }
 }
+
+/*2nd section*/
 .About{
-    display: flex;
     background-color: #A4A4A4;
     width: 100%;
     height: 100vh;
+    position: relative;
+    background-image: linear-gradient(gray,#e3e3e3,white,white);
 }
-.grid{
-    grid-template-columns: 40px 10px 40px;
-    grid-template-rows: 15px 15px 15px;
-    justify-items: start;
-    margin-left: 60%;
-}
-.description{
-    margin-right: 8%;
-    margin-top: 13%;
-}
-.description h1{
+/*.description{
+    top: 40px;
+    right: 20px;
+    position: absolute;
+}*/
+.description>h1{
     font-family: IM FELL French Canon;
-    font-size: 20px;
+    font-size: 25px;
+    right: 32%;
+    top: 55px;
+    position: absolute;
 }
-.description p{
+.description > p{
     font-family: JejuMyeongjo;
-    font-size: 15px;
+    font-size: 17px;
+    left: 48%;
+    position: absolute;
+    top: 15%;
 }
-.description h2{
+.description > h2{
     font-family: Inter;
-    font-size: 12px;
+    font-size: 19px;
+    left: 48%;
+    position: absolute;
+    top: 22%;
 }
 .my{
-    height: 30%;
-    width: auto;
+    height: 60%;
+    width: 30%;
     position: absolute;
-    left: 8%;
-    bottom: 15px;
-    transform: translateX(-60%);
-    transition: bottom 1s,left 1s;
+    left: 40px;
+    bottom: 25px;
+    border-radius: 10%;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 150px 20px 350px;
+    grid-template-rows: 25px 25px 25px 25px;
+    position: absolute;
+    left: 48%;
+    top: 26%;
+}
+.grid_a > h3{
+    font-family: JejuMyeongjo;
+    font-size: 17px;
+}
+.grid_b > h3{
+    font-family: JejuMyeongjo;
+    font-size: 17px;
+}
+.grid_c > h3{
+    font-family: JejuMyeongjo;
+    font-size: 17px;
+}
+.education > h3{
+    font-family: Inter;
+    font-size: 19px;
+    left: 48%;
+    position: absolute;
+    top: 41%;
+}
+.education > ul{
+    left: 48%;
+    position: absolute;
+    top: 45%;
+}
+ul > h1{
+    font-family: JejuMyeongjo;
+    font-size: 17px;
+}
+.education > ul > h1:before{
+    content: "🎓";
+    color: black;
+    font-size: 21px;
+}
+.carrier > h2{
+    font-family: Inter;
+    font-size: 19px;
+    left: 48%;
+    position: absolute;
+    top: 57%;
+}
+.carrier > ol{
+    left: 48%;
+    position: absolute;
+    top: 61%;
+}
+.carrier ol h1{
+    font-family: JejuMyeongjo;
+    font-size: 17px;
+}
+.carrier ol h1:before{
+    content: "💻";
+    color: black;
+    font-size: 16px;
+}
+.cus h2{
+    font-family: Inter;
+    font-size: 19px;
+    left: 48%;
+    position: absolute;
+    top: 69%;
+}
+ol{
+    left: 48%;
+    position: absolute;
+    top: 73%;
+}
+ol h1{
+    font-family: JejuMyeongjo;
+    font-size: 17px;
+}
+ol h1:before{
+    content: "👩‍💼";
+    color: black;
+    font-size: 16px;
+}
+.qualification{
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
 }
