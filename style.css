@@ -20,6 +20,7 @@
     justify-content: space-between;
     background-color: white;
     z-index: 1;
+    box-shadow: 0px -1px 8px 2px #1c1717e8;
 }
 body{
     z-index: 0;
@@ -201,16 +202,16 @@ nav ul li a:hover{
     top: 26%;
 }
 .grid_a > h3{
-    font-family: JejuMyeongjo;
-    font-size: 17px;
+    font-family: Microsoft Yi Baiti;
+    font-size: 20px;
 }
 .grid_b > h3{
-    font-family: JejuMyeongjo;
-    font-size: 17px;
+    font-family: Microsoft Yi Baiti;
+    font-size: 20px;
 }
 .grid_c > h3{
-    font-family: JejuMyeongjo;
-    font-size: 17px;
+    font-family: Microsoft Yi Baiti;
+    font-size: 20px;
 }
 .education > h3{
     font-family: Inter;
@@ -225,8 +226,8 @@ nav ul li a:hover{
     top: 45%;
 }
 ul > h1{
-    font-family: JejuMyeongjo;
-    font-size: 17px;
+    font-family: Microsoft Yi Baiti;
+    font-size: 20px;
 }
 .education > ul > h1:before{
     content: "🎓";
@@ -246,8 +247,8 @@ ul > h1{
     top: 61%;
 }
 .carrier ol h1{
-    font-family: JejuMyeongjo;
-    font-size: 17px;
+    font-family: Microsoft Yi Baiti;
+    font-size: 20px;
 }
 .carrier ol h1:before{
     content: "💻";
@@ -267,8 +268,8 @@ ol{
     top: 73%;
 }
 ol h1{
-    font-family: JejuMyeongjo;
-    font-size: 17px;
+    font-family: Microsoft Yi Baiti;
+    font-size: 20px;
 }
 ol h1:before{
     content: "👩‍💼";
@@ -279,6 +280,7 @@ ol h1:before{
     width: 100%;
     height: 100vh;
     position: relative;
+
 }
 .topic > h1{
     position: absolute;
@@ -288,5 +290,83 @@ ol h1:before{
     font-size: 25px;
 }
 .line{
-
+    border-left: 2px solid black;
+    height: 430px;
+    top: 80px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+}
+.square_1 img{
+    filter: drop-shadow(8px 8px 10px gray);
+    left: 30%;
+    position: absolute;
+    width: 290px;
+    height: 120px;
+    top: 90px;
+}
+.square_2 img{
+    filter: drop-shadow(8px 8px 10px gray);
+    right: 30%;
+    position: absolute;
+    width: 290px;
+    height: 120px;
+    top: 32%;
+}
+.square_3 img{
+    filter: drop-shadow(8px 8px 10px gray);
+    left: 30%;
+    position: absolute;
+    width: 290px;
+    height: 120px;
+    top: 50%;
+}
+.skills{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background-color: #83B4E1;
+}
+.square_1 h1{
+    position: absolute;
+    left: 35%;
+    top: 15%;
+    font-size: 17px;
+    font-family: Zapf Chancery;
+}
+.square_1 h2 {
+    position: absolute;
+    left: 32%;
+    top: 21%;
+    font-size: 15px;
+    font-family: DengXian;
+}
+.square_2 h1{
+    position: absolute;
+    right: 31%;
+    top: 35%;
+    font-size: 17px;
+    font-family: Zapf Chancery;
+}
+.square_2 h2 {
+    position: absolute;
+    right: 33%;
+    top: 40%;
+    font-size: 15px;
+    font-family: DengXian;
+}
+.square_3 h1{
+    position: absolute;
+    left: 31%;
+    top: 53%;
+    font-size: 17px;
+    font-family: Zapf Chancery;
+}
+.square_3 h2 {
+    position: absolute;
+    left: 31%;
+    top: 60%;
+    font-size: 15px;
+    font-family: DengXian;
 }
