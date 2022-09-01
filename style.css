@@ -157,7 +157,7 @@ nav ul li a:hover{
     width: 100%;
     height: 100vh;
     position: relative;
-    background-image: linear-gradient(gray,#e3e3e3,white,white);
+    background-image: linear-gradient(gray,#e3e3e3,white,white,white,white,white,#f5f5f5);
 }
 /*.description{
     top: 40px;
@@ -284,7 +284,7 @@ ol h1:before{
 }
 .topic > h1{
     position: absolute;
-    top: 10px;
+    top: 18px;
     left: 45%;
     font-family: IM FELL French Canon;
     font-size: 25px;
@@ -325,8 +325,13 @@ ol h1:before{
     bottom: 0;
     position: absolute;
     width: 100%;
-    height: 20%;
-    background-color: #83B4E1;
+    height: 17%;
+    background-color: #bcc1d4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 14%;
+    justify-content: center;
 }
 .square_1 h1{
     position: absolute;
@@ -369,4 +374,31 @@ ol h1:before{
     top: 60%;
     font-size: 15px;
     font-family: DengXian;
+}
+.skill{
+    position: absolute;
+    width: 15%;
+    height: 6%;
+    background-image: linear-gradient(#c3cdd9,white,white,white);
+    bottom: 17%;
+    left: 0;
+    filter: drop-shadow(3px 3px 3px #8391a3);
+}
+.skills img{
+    position: absolute;
+    width: 50px;
+    height: auto;
+    bottom: 45px;
+}
+.skills h1{
+    font-size: 15px;
+    position: absolute;
+    bottom: 25px;
+}
+.skill h2{
+    position: absolute;
+    font-size: 18px;
+    left: 50px;
+    bottom: 22%;
+    font-family: Zapf Chancery;
 }
