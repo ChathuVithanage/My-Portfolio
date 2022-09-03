@@ -157,7 +157,7 @@ nav ul li a:hover{
     width: 100%;
     height: 100vh;
     position: relative;
-    background-image: linear-gradient(gray,#e3e3e3,white,white,white,white,white,#f5f5f5);
+    background-image: linear-gradient(gray,#e3e3e3,white,white,white,white,white);
 }
 /*.description{
     top: 40px;
@@ -401,4 +401,101 @@ ol h1:before{
     left: 50px;
     bottom: 22%;
     font-family: Zapf Chancery;
+}
+.services{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topic-2 h1{
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    font-family: IM FELL French Canon;
+    font-size: 25px;
+}
+.topic-2 h2{
+    font-family: DengXian;
+    font-size: 17px;
+    left: 14%;
+    position: absolute;
+    top: 15%;
+}
+.box_1{
+    background:#e4e6ed;
+    border-radius: 10px;
+    width:500px;
+    height:140px;
+    position: relative;
+    display: inline-block;
+    top: 27%;
+}
+.box_1:before{
+    content:"";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 60px;
+    left: -29px; /* 1px buffer for zooming problems while rendering*/
+    border-width: 15px;
+    border-color: transparent #e4e6ed transparent transparent;
+    border-style: solid;
+}
+.box_2{
+    background:#e4e6ed;
+    border-radius: 10px;
+    width:500px;
+    height:140px;
+    position: relative;
+    display: inline-block;
+    top: 30%;
+}
+.box_2:before{
+    content:"";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 60px;
+    left: -29px; /* 1px buffer for zooming problems while rendering*/
+    border-width: 15px;
+    border-color: transparent #e4e6ed transparent transparent;
+    border-style: solid;
+}
+.box_3{
+    background:#e4e6ed;
+    border-radius: 10px;
+    width:500px;
+    height:140px;
+    position: relative;
+    display: inline-block;
+    top: 33%;
+}
+.box_3:before{
+    content:"";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 60px;
+    left: -29px; /* 1px buffer for zooming problems while rendering*/
+    border-width: 15px;
+    border-color: transparent #e4e6ed transparent transparent;
+    border-style: solid;
+}
+.line_2{
+    border-left: 3px solid #555a6b;
+    height: 510px;
+    top: 24%;
+    position: absolute;
+    left: 29%;
+    margin-left: -3px;
+}
+.logo_1 {
+    position: absolute;
+    top: 28%;
+    left: 27%;
+    width: 2%;
+    height: auto;
 }
