@@ -502,3 +502,124 @@ ol h1:before{
     flex-direction: column;
     row-gap: 110px;
 }
+.box_1 h1{
+    position: absolute;
+    left: 8%;
+    top: 16%;
+    font-size: 15px;
+}
+.box_2 h1{
+    position: absolute;
+    left: 8%;
+    top: 16%;
+    font-size: 15px;
+}
+.box_3 h1{
+    position: absolute;
+    left: 8%;
+    top: 16%;
+    font-size: 15px;
+}
+.projects{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(gray,white, white);
+}
+.projects h1{
+    position: absolute;
+    font-family: IM FELL French Canon;
+    font-size: 25px;
+    right: 20%;
+    top: 6%;
+}
+.box_a{
+    width: 13%;
+    height: 38%;
+    filter: drop-shadow(8px 8px 10px gray);
+    position: absolute;
+    background-image: linear-gradient(black,#545353,#827f7f,#c2bebe,white,white);
+    top: 13%;
+    left: 10%;
+}
+.box_b{
+    width: 13%;
+    height: 38%;
+    filter: drop-shadow(8px 8px 10px gray);
+    position: absolute;
+    background-image: linear-gradient(black,#545353,#827f7f,#c2bebe,white,white);
+    top: 25%;
+    left: 28%;
+}
+.box_c{
+    width: 13%;
+    height: 38%;
+    filter: drop-shadow(8px 8px 10px gray);
+    position: absolute;
+    background-image: linear-gradient(black,#545353,#827f7f,#c2bebe,white,white);
+    top: 37%;
+    left: 46%;
+}
+.box_d{
+    width: 13%;
+    height: 38%;
+    filter: drop-shadow(8px 8px 10px gray);
+    position: absolute;
+    background-image: linear-gradient(black,#545353,#827f7f,#c2bebe,white,white);
+    top: 49%;
+    left: 64%;
+}
+.book{
+    position: absolute;
+    left: 28%;
+    top: 6%;
+}
+.box_a h2{
+    position: absolute;
+    font-size: 16px;
+    top: 40%;
+    align-self: center;
+    left: 10%;
+}
+.box_a h1{
+    position: absolute;
+    font-size: 15px;
+    top: 52%;
+    left: 6%;
+}
+.shopping{
+    position: absolute;
+    left: 28%;
+    top: 6%;
+}
+.box_b h2{
+    position: absolute;
+    font-size: 16px;
+    top: 40%;
+    align-self: center;
+    left: 10%;
+}
+.hostel{
+    position: absolute;
+    left: 28%;
+    top: 6%;
+}
+.box_c h2{
+    position: absolute;
+    font-size: 16px;
+    top: 40%;
+    align-self: center;
+    left: 10%;
+}
+.chat{
+    position: absolute;
+    left: 28%;
+    top: 6%;
+}
+.box_d h2{
+    position: absolute;
+    font-size: 16px;
+    top: 40%;
+    align-self: center;
+    left: 10%;
+}
