@@ -418,7 +418,7 @@ ol h1:before{
     font-size: 25px;
 }
 .topic-2 h2{
-    font-family: DengXian;
+    font-family: JejuMyeongjo;
     font-size: 17px;
     left: 14%;
     position: absolute;
@@ -494,8 +494,11 @@ ol h1:before{
 }
 .logo_1 {
     position: absolute;
-    top: 28%;
+    top: 34%;
     left: 27%;
-    width: 2%;
+    width: 50px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 110px;
 }
