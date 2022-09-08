@@ -529,7 +529,7 @@ ol h1:before{
     position: absolute;
     font-family: IM FELL French Canon;
     font-size: 25px;
-    right: 20%;
+    right: 22%;
     top: 6%;
 }
 .box_a{
@@ -785,82 +785,75 @@ ol h1:before{
 
 /*gallery section*/
 .gallery{
-   width: 100%;
-    height: 100vh;
     position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.slide-container {
     width: 100%;
-    height:85vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+    height: 100vh;
 }
-
-.image-slider{
-    width: 100%;
-    height: 600px;
+.art {
+    width: 900px;
+    height: 480px;
+    box-shadow: 1px 3px 5px 1px #736060;
     position: absolute;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 1s;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
 }
-
-.slides-div {
+.art span {
+    height: 300%;
+    width: 150%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 30px;
+    animation-name: slider-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
 }
-
-.img{
+.art > span > div {
+    height: 60%;
+    width: 40%;
     position: relative;
-    width: 240px;
-    height: 370px;
-    transition: 0.5s;
 }
 
-.button {
+.art > span > div:nth-child(1) {
+    background-size: cover;
+    background-position: center;
     position: absolute;
-    width: 240px;
-    height: 370px;
-    transition: 0.5s;
-    background-color: rgba(67, 67, 151, 0.2);
 }
 
-.slider-span1:target ~ .image-slider .img1,
-.slider-span1:target ~.image-slider .button-1{
-    width:380px;
-    height: 585px;
-    background-color: transparent;
-}
-.slider-span2:target ~ .image-slider .img2,
-.slider-span2:target ~.image-slider .button-2{
-    width:380px;
-    height: 585px;
-    background-color: transparent;
-}
-.slider-span3:target ~ .image-slider .img3,
-.slider-span3:target ~.image-slider .button-3{
-    width:380px;
-    height: 585px;
-    background-color: transparent;
+.art > span > div:nth-child(2) {
+    background-size: cover;
+    background-position: center;
+    position: absolute;
 }
 
-.slider-span1:target ~.image-slider{
-    left:20%;
+.art > span > div:nth-child(3) {
+    background: url("assest/1662482039404.jpg");
+    background-size: cover;
+    background-position: center;
 }
-.slider-span2:target ~.image-slider{
-    left:0%;
+
+.art > span > div:nth-child(4) {
+    background: url("assest/1662482134900.jpg");
+    background-size: cover;
+    background-position: center;
 }
-.slider-span3:target ~.image-slider {
-    left: -20%;
+
+@keyframes slider-animation {
+    0%,20%{
+        transform: translateX(0);
+    }
+    30%,50% {
+        transform: translateX(-25%);
+    }
+    60%,80% {
+        transform: translateX(-50%);
+    }
+    90%,100% {
+        transform: translateX(-75%);
+    }
 }
 
 /*contact section*/
@@ -883,6 +876,45 @@ ol h1:before{
 }
 .location iframe{
     width: 100%;
+    height: 30%;
+}
+.contact_box{
+    width: 400px;
+    height: 410px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #999;
+    top: 68%;
+    left: 30%;
+    bottom: 20%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+form{
+    margin: 40px;
+}
+.input_field{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #777;
+    border-radius: 14px;
+    outline: none;
+}
+.textarea_field{
+    height: 120px;
+    padding-top: 10px;
+}
+.btn{
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 18px;
+    padding: 10px;
+    background-color: #47c35a;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
 }
 
 
