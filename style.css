@@ -134,7 +134,8 @@ nav ul li a:hover{
     display: block;
     width: 5px;
     height: 5px;
-    margin: 10px;
+    margin-left: 1.5px;
+    margin-top: 12px;
     border: 2px solid transparent;
     border-right: 2px solid black;
     border-bottom-color: black;
@@ -784,26 +785,18 @@ ol h1:before{
 }
 
 /*gallery section*/
-.gallery{
-    position: relative;
+.gallery {
     width: 100%;
     height: 100vh;
-}
-.art {
-    width: 900px;
-    height: 480px;
-    box-shadow: 1px 3px 5px 1px #736060;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555a6b;
     overflow: hidden;
 }
-.art span {
-    height: 300%;
-    width: 150%;
+.slider_box{
+    height: 200px;
+    width: 50px;
     display: flex;
     animation-name: slider-animation;
     animation-duration: 10s;
@@ -811,50 +804,55 @@ ol h1:before{
     animation-direction: alternate;
     animation-timing-function: linear;
 }
-.art > span > div {
-    height: 60%;
-    width: 40%;
-    position: relative;
+.slider_box div {
+    height: 400px;
+    width: 400px;
+}
+.slider_box div img{
+    width: 100%;
+    height: 100vh;
 }
 
-.art > span > div:nth-child(1) {
+.slider_box > div:nth-child(1) {
+    background: url("assest/1656062536687.jpg");
     background-size: cover;
     background-position: center;
-    position: absolute;
 }
 
-.art > span > div:nth-child(2) {
+.slider_box > div:nth-child(2) {
+    background: url("assest/1656062678189.jpg");
     background-size: cover;
     background-position: center;
-    position: absolute;
 }
 
-.art > span > div:nth-child(3) {
+.slider_box > div:nth-child(3) {
     background: url("assest/1662482039404.jpg");
     background-size: cover;
     background-position: center;
 }
 
-.art > span > div:nth-child(4) {
+.slider_box > div:nth-child(4) {
     background: url("assest/1662482134900.jpg");
     background-size: cover;
     background-position: center;
 }
 
 @keyframes slider-animation {
-    0%,20%{
+    0%,10%{
         transform: translateX(0);
     }
-    30%,50% {
-        transform: translateX(-25%);
+    20%,30% {
+        transform: translateX(-100%);
     }
-    60%,80% {
-        transform: translateX(-50%);
+    40%,50% {
+        transform: translateX(-200%);
     }
-    90%,100% {
-        transform: translateX(-75%);
+    60%,70% {
+        transform: translateX(-300%);
     }
 }
+
+
 
 /*contact section*/
 .contact{
@@ -916,6 +914,34 @@ form{
     border: none;
     cursor: pointer;
 }
+.info h1{
+    font-size: 20px;
+    font-family: Serif;
+    top: 40%;
+    right: 28%;
+    position: absolute;
+}
+.details{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 100px 100px 250px;
+    grid-template-rows: 300px 200px 200px;
+    right: 20%;
+    top: 48%;
+    align-content: center;
+}
+
+.info details li a{
+    color: black;
+    text-decoration: none;
+}
+.info details li a:hover{
+    color: darkred;
+}
+
+
+
+
 
 
 
