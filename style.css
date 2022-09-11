@@ -921,23 +921,55 @@ form{
     right: 28%;
     position: absolute;
 }
-.details{
-    position: absolute;
-    display: grid;
-    grid-template-columns: 100px 100px 250px;
-    grid-template-rows: 300px 200px 200px;
-    right: 20%;
+.contact_col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact_col div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    right: 15%;
+}
+.address{
+    left: 55%;
     top: 48%;
-    align-content: center;
+    position: absolute;
+}
+.phone{
+    left: 55%;
+    top: 58%;
+    position: absolute;
+}
+.mail{
+    left: 55%;
+    top: 68%;
+    position: absolute;
+}
+.contact_col div .fa{
+    font-size: 30px;
+    color: black;
+    margin-right: 35px;
+}
+.contact_col div p{
+    padding: 0;
+}
+.contact_col div h5{
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
 }
 
-.info details li a{
-    color: black;
-    text-decoration: none;
-}
-.info details li a:hover{
-    color: darkred;
-}
+
+
+
+
+
+
+
+
 
 
 
