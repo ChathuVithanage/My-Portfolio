@@ -525,6 +525,7 @@ ol h1:before{
     position: relative;
     width: 100%;
     height: 100vh;
+    background-image: linear-gradient(#76878a, #ccd7d9, white, white, #ffeae3);
 }
 .projects h1{
     position: absolute;
@@ -961,6 +962,21 @@ form{
     color: #555;
     font-weight: 400;
 }
+.footer{
+    width: 100%;
+    height: 20vh;
+    background: #5d6075;
+    position: relative;
+}
+.head h1{
+    color: black;
+    font-size: 18px;
+    font-family: "Arial Rounded MT Bold";
+    left: 45%;
+    top: 10px;
+    position: absolute;
+}
+
 
 
 
