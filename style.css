@@ -316,7 +316,7 @@ ol h1:before{
     position: absolute;
     width: 290px;
     height: 120px;
-    top: 32%;
+    top: 31%;
 }
 .square_3 img{
     filter: drop-shadow(8px 8px 10px gray);
@@ -513,16 +513,37 @@ ol h1:before{
     top: 16%;
     font-size: 15px;
 }
+.box_1 h2{
+    position: absolute;
+    left: 8%;
+    top: 36%;
+    font-family: "Bell MT";
+    font-size: 15px;
+}
 .box_2 h1{
     position: absolute;
     left: 8%;
     top: 16%;
     font-size: 15px;
 }
+.box_2 h2{
+    position: absolute;
+    left: 8%;
+    top: 36%;
+    font-family: "Bell MT";
+    font-size: 15px;
+}
 .box_3 h1{
     position: absolute;
     left: 8%;
     top: 16%;
+    font-size: 15px;
+}
+.box_3 h2{
+    position: absolute;
+    left: 8%;
+    top: 36%;
+    font-family: "Bell MT";
     font-size: 15px;
 }
 .projects{
@@ -1153,7 +1174,29 @@ nav .icon-b .lines{
 
     /*Qualifications*/
 
-
+    .topic h1{
+        left: 30%;
+        font-size: 20px;
+        border: 2px solid red;
+    }
+    .line{
+        display: none;
+    }
+    .skill h2{
+        left: 6px;
+        font-size: 17px;
+    }
+    .skills img{
+        display: none;
+    }
+    .skills{
+        display: grid;
+        grid-template-columns: 150px 150px ;
+        grid-template-rows: 10px  10px 10px;
+    }
+    .skills img h1{
+        padding: 2px;
+    }
 
 }
 
