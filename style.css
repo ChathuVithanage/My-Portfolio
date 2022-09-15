@@ -1198,6 +1198,23 @@ nav .icon-b .lines{
         padding: 2px;
     }
 
+    /*services*/
+    .topic-2 h1{
+        left: 15%;
+        top: 5%;
+        font-size: 25px;
+    }
+    .topic-2 h2{
+        left: 8px;
+        top: 14%;
+    }
+    .line_2, .logo_1{
+        display: none;
+    }
+    .box_1, .box_2, .box_3{
+        width: 350px;
+    }
+
 }
 
 
