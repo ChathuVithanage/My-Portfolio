@@ -1014,6 +1014,7 @@ nav .icon-b .lines{
 
 @media all and (min-width: 320px) and (max-width:769px) {
 
+    /*navigation bar*/
     .navbar{
         width: 100%;
         height: 50px;
@@ -1099,6 +1100,61 @@ nav .icon-b .lines{
         bottom: -38%;
         text-align: left;
     }
+
+    /*About me*/
+
+    .description h1{
+        font-size: 20px;
+        top: 15px;
+        text-align: center;
+    }
+    .my{
+       display: none;
+    }
+    .description p{
+        left: 8px;
+        top: 45px;
+        font-size: 15px;
+    }
+    .description h2{
+        left: 8px;
+        top: 90px;
+        font-size: 18px;
+    }
+    .grid{
+        top: 120px;
+        left: 8px;
+    }
+    .education h3{
+        position: absolute;
+        left: 10px;
+        top: 38%;
+    }
+    .education ul{
+        left: 12px;
+        top: 42%;
+    }
+    .carrier h2{
+        left: 10px;
+        top: 56%;
+    }
+    .carrier ol{
+        left: 10px;
+        top: 60%;
+    }
+    .cus h2{
+        left: 10px;
+        top: 68%;
+    }
+    .cus ol{
+        left: 10px;
+        top: 74%;
+    }
+
+    /*Qualifications*/
+
+
+
 }
 
 
