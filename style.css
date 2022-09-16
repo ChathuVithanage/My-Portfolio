@@ -675,21 +675,7 @@ ol h1:before{
     top: 50%;
     left: 15%;
 }
-.video{
-    position: absolute;
-    width: auto;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: -100;
-}
-@media (min-aspect-ratio: 16/9) {
-    .video{
-        width: 100%;
-        height: auto;
-    }
-}
+
 .click{
     width: 55px;
     height: 55px;
@@ -814,69 +800,34 @@ ol h1:before{
 .gallery {
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #555a6b;
-    overflow: hidden;
+    background-image: radial-gradient(circle, #9fa2ab, #c3d9d7, white,white);
+    position: relative;
 }
-.slider_box{
-    height: 200px;
-    width: 50px;
-    display: flex;
-    animation-name: slider-animation;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
+.gallery h1{
+    font-size: 2.1rem;
+    line-height: 1.4;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    margin-top: 40px;
 }
-.slider_box div {
-    height: 400px;
-    width: 400px;
+.main_div{
+    width: 30%;
+    height: 550px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("https://i.ibb.co/9hrtxT0/1656062536687.jpg");
+    background-size: 100% 100%;
+    box-shadow: 1px 2px 10px black;
+    animation: slider 10s infinite linear;
 }
-.slider_box div img{
-    width: 100%;
-    height: 100vh;
-}
-
-.slider_box > div:nth-child(1) {
-    background: url("assest/1656062536687.jpg");
-    background-size: cover;
-    background-position: center;
+@keyframes slider {
+    0%{background-image: url("https://i.ibb.co/PNF5pcq/1663356337955.jpg")}
+    40%{background-image: url("https://i.ibb.co/Jm83vjD/1663356337990.jpg")}
+    80%{background-image: url("https://i.ibb.co/GdXh0cj/1663356337972.jpg")}
 }
 
-.slider_box > div:nth-child(2) {
-    background: url("assest/1656062678189.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.slider_box > div:nth-child(3) {
-    background: url("assest/1662482039404.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.slider_box > div:nth-child(4) {
-    background: url("assest/1662482134900.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-@keyframes slider-animation {
-    0%,10%{
-        transform: translateX(0);
-    }
-    20%,30% {
-        transform: translateX(-100%);
-    }
-    40%,50% {
-        transform: translateX(-200%);
-    }
-    60%,70% {
-        transform: translateX(-300%);
-    }
-}
 
 
 
@@ -1214,6 +1165,85 @@ nav .icon-b .lines{
     .box_1, .box_2, .box_3{
         width: 350px;
     }
+
+    /*projects*/
+    .projects{
+        position: relative;
+        height: 150vh;
+    }
+    .add{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 20px;
+    }
+    .add h1{
+        font-size: 20px;
+        left: 15px;
+        top: 15px;
+    }
+    .box_a, .box_b, .box_c, .box_d{
+        width: 70%;
+        height: 13%;
+        border: 2px solid darkblue;
+        left: 16%;
+    }
+    .box_a img, .box_b img, .box_c img, .box_d img{
+        width: 16%;
+        left: 15px;
+        top: 40%;
+    }
+    .box_a h2, .box_b h2, .box_c h2, .box_d h2 {
+        left: 15px;
+        font-size: 16px;
+        top: 14%;
+    }
+    .box_a h1, .box_b h1, .box_c h1, .box_d h1 {
+        left: 30%;
+        font-size: 13px;
+        top: 40%;
+    }
+    .click img, .click_a img, .click_b img, .click_c img{
+        width: 40%;
+        height: auto;
+    }
+
+    /*Gallery*/
+    .main_div{
+        width: 50%;
+        height: 55%;
+    }
+
+    /*contact*/
+    .contact{
+        position: relative;
+    }
+    .location{
+        display: none;
+    }
+    .topic_a{
+        top: 2px;
+        text-align: center;
+    }
+    .contact_box{
+        top: 34%;
+        width: 70%;
+        left: 50%;
+    }
+    .contact_box form{
+       left: 2%;
+    }
+    .input_field{
+        width: 85%;
+    }
+    .info h1{
+        display: none;
+    }
+    .address, .phone,.mail{
+        left: 5px;
+        margin: 120px 15px;
+
+    }
+
 
 }
 
