@@ -1243,10 +1243,44 @@ nav .icon-b .lines{
         margin: 120px 15px;
 
     }
-
-
 }
 
+@media all and (min-width:769px) and (max-width:1024px) {
+
+    /*navigation bar*/
+    nav ul li{
+        padding:15px 15px;
+        display: inline-block;
+        list-style-type: none;
+        height: 100%;
+    }
+    nav ul li a{
+        color: #333;
+        font-size: medium;
+    }
+
+    /*home*/
+    .container h1{
+        font-size: 35px;
+    }
+    .container p{
+        position: absolute;
+        width: 30%;
+        left: 8%;
+        top: 40%;
+    }
+    .frame{
+        width: 75%;
+        height: 62%;
+        bottom: 20%;
+    }
+    .girl{
+        width: 75%;
+        height: auto;
+        bottom: 12%;
+        left: 75%;
+    }
+}
 
 
 
