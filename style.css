@@ -304,7 +304,7 @@ ol h1:before{
 }
 .square_1 img{
     filter: drop-shadow(8px 8px 10px gray);
-    left: 30%;
+    left: 28%;
     position: absolute;
     width: 290px;
     height: 120px;
@@ -312,7 +312,7 @@ ol h1:before{
 }
 .square_2 img{
     filter: drop-shadow(8px 8px 10px gray);
-    right: 30%;
+    right: 28%;
     position: absolute;
     width: 290px;
     height: 120px;
@@ -320,7 +320,7 @@ ol h1:before{
 }
 .square_3 img{
     filter: drop-shadow(8px 8px 10px gray);
-    left: 30%;
+    left: 28%;
     position: absolute;
     width: 290px;
     height: 120px;
@@ -340,42 +340,42 @@ ol h1:before{
 }
 .square_1 h1{
     position: absolute;
-    left: 35%;
+    left: 33%;
     top: 15%;
     font-size: 17px;
     font-family: Zapf Chancery;
 }
 .square_1 h2 {
     position: absolute;
-    left: 32%;
+    left: 30%;
     top: 21%;
     font-size: 15px;
     font-family: DengXian;
 }
 .square_2 h1{
     position: absolute;
-    right: 31%;
+    right: 29%;
     top: 35%;
     font-size: 17px;
     font-family: Zapf Chancery;
 }
 .square_2 h2 {
     position: absolute;
-    right: 33%;
+    right: 30%;
     top: 40%;
     font-size: 15px;
     font-family: DengXian;
 }
 .square_3 h1{
     position: absolute;
-    left: 31%;
+    left: 30%;
     top: 53%;
     font-size: 17px;
     font-family: Zapf Chancery;
 }
 .square_3 h2 {
     position: absolute;
-    left: 31%;
+    left: 30%;
     top: 60%;
     font-size: 15px;
     font-family: DengXian;
@@ -546,11 +546,13 @@ ol h1:before{
     font-family: "Bell MT";
     font-size: 15px;
 }
+
+/*project section*/
 .projects{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(#76878a, #ccd7d9, white, white, #ffeae3);
+    background-image: linear-gradient(#76878a, #ccd7d9, white, white);
 }
 .projects h1{
     position: absolute;
@@ -982,6 +984,35 @@ nav .icon-b .lines{
     transition: all .5s ease-in-out;
 }
 
+/*footer*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-color: #202931;
+}
+
+footer>div {
+    text-align: center;
+}
+div h1 i{
+    color: white;
+}
+
+footer h1 {
+    all: initial;
+    font-size: 30px;
+    color: white;
+    padding: 30px;
+    display: inline-block;
+}
+footer>p {
+    color: grey;
+    font-size: smaller;
+    padding-bottom: 30px;
+}
+
 /*responsive*/
 
 @media all and (min-width: 320px) and (max-width:769px) {
@@ -1378,6 +1409,57 @@ nav .icon-b .lines{
     }
 }
 
+@media all and (min-width:1024px) and (max-width:1440px) {
+    .container p{
+        width: 75%;
+    }
+    .frame{
+        left: 61%;
+    }
+    .girl{
+        left: 78%;
+    }
+    .line_2, .logo_1{display: none}
+
+    .box_a, .box_b, .box_c, .box_d {
+        width: 18%;
+        height: 38%;
+    }
+    .box_a h2, .box_b h2, .box_c h2, .box_d h2 {
+        top: 35%;
+    }
+    .box_a{
+        left: 12%;
+    }
+    .box_b{
+        left: 33%;
+    }
+    .box_c{
+        left: 54%;
+    }
+    .box_d{
+        left: 75%;
+    }
+    .main_div{
+        width: 33%;
+        height: 68%;
+    }
+    .book, .shopping, .hostel, .chat{
+        width: 27%;
+    }
+    .line{
+        display: none;
+    }
+
+}
+
+
+@media all and (min-width:1440px) {
+    .main_div{
+        width: 28%;
+        height: 70%;
+    }
+}
 
 
 
