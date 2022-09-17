@@ -1214,7 +1214,7 @@ footer>p {
     }
     .box_a, .box_b, .box_c, .box_d{
         width: 70%;
-        height: 13%;
+        height: 17%;
         border: 2px solid darkblue;
         left: 16%;
     }
@@ -1236,6 +1236,18 @@ footer>p {
     .click img, .click_a img, .click_b img, .click_c img{
         width: 40%;
         height: auto;
+    }
+    .box_a{
+        top: 15%;
+    }
+    .box_b{
+        top: 35%;
+    }
+    .box_c{
+        top: 55%;
+    }
+    .box_d{
+        top: 75%;
     }
 
     /*Gallery*/
