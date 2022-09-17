@@ -1270,16 +1270,62 @@ nav .icon-b .lines{
         top: 40%;
     }
     .frame{
-        width: 75%;
-        height: 62%;
+        width: 72%;
+        height: 60%;
         bottom: 20%;
     }
     .girl{
         width: 75%;
         height: auto;
-        bottom: 12%;
-        left: 75%;
+        bottom: 14%;
+        left: 77%;
     }
+
+    /*About section*/
+    .my{
+        width: 30%;
+        height: 35%;
+        top: 150px;
+    }
+    .description h1{
+        position: relative;
+        left: 40%;
+        top: 10px;
+    }
+    .description p{
+        left: 15px;
+        top: 70px;
+    }
+    .description h2{
+        left: 40%;
+    }
+    .grid{
+        left: 40%;
+    }
+    .education h3{
+        left: 40%;
+    }
+    .education ul{
+        left: 40%;
+    }
+    .carrier h2{
+        left: 40%;
+    }
+    .carrier ol{
+        left: 40%;
+    }
+    .cus h2{
+        left: 8%;
+    }
+    .cus ol{
+        left: 8%;
+    }
+
+    /*Qualification*/
+    .line{
+        display: none;
+    }
+
 }
 
 
