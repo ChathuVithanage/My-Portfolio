@@ -1284,8 +1284,8 @@ nav .icon-b .lines{
     /*About section*/
     .my{
         width: 30%;
-        height: 35%;
-        top: 150px;
+        height: 43%;
+        top: 148px;
     }
     .description h1{
         position: relative;
@@ -1325,7 +1325,57 @@ nav .icon-b .lines{
     .line{
         display: none;
     }
+    .skill h2{
+        left: 8px;
+    }
+    .skills img{
+        width: 5%;
+        bottom: 57%;
+    }
 
+    /*services*/
+    .line_2, .logo_1{
+        display: none;
+    }
+
+    /*Gallery*/
+    .main_div{
+        width: 40%;
+        height: 60%;
+    }
+
+    /*contact*/
+    .contact_box{
+        position: relative;
+        width: 48%;
+        height: 30%;
+        top: 2%;
+        left: 50%;
+    }
+    .input_field{
+        width: 90%;
+        top: 20px;
+        height: 14%;
+    }
+    .info h1{
+        display: none;
+    }
+    .address, .phone,.mail{
+        left: 28%;
+        margin: 160px 12px;
+    }
+    .address span h5, p{
+        font-size: 14px;
+        left: 30%;
+    }
+    .phone span h5, p{
+        font-size: 14px;
+        left: 30%;
+    }
+    .mail span h5, p{
+        font-size: 14px;
+        left: 30%;
+    }
 }
 
 
