@@ -797,6 +797,20 @@ ol h1:before{
     transform: rotate(360deg);
     transition: all 2s;
 }
+.down{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 10%;
+    height: 20px;
+    color: black;
+}
+.add h2{
+    position: absolute;
+    left: 43%;
+    bottom: 40px;
+    font-size: 20px;
+}
 
 /*gallery section*/
 .gallery {
@@ -1195,6 +1209,10 @@ footer>p {
     }
     .box_1, .box_2, .box_3{
         width: 350px;
+    }
+    .add h2{
+        font-size: 14px;
+        left: 38%;
     }
 
     /*projects*/
