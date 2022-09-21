@@ -805,11 +805,11 @@ ol h1:before{
     height: 20px;
     color: black;
 }
-.add h2{
+.add h3{
     position: absolute;
-    left: 43%;
+    left: 44%;
     bottom: 40px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /*gallery section*/
@@ -1397,6 +1397,15 @@ footer>p {
     /*services*/
     .line_2, .logo_1{
         display: none;
+    }
+
+    /*project*/
+    .add h2{
+        font-size: small;
+        top: 30%;
+    }
+    .click_a, .click, .click_b, .click_c{
+        bottom: -10%;
     }
 
     /*Gallery*/

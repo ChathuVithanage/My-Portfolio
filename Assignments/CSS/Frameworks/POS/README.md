@@ -15,4 +15,3 @@ MockUp: https://www.figma.com/file/5bnaQvXv9RWyfOLYiIM0LQ/POS-system?node-id=0%3
 ## Technologies
 
 HTML,CSS & Boostrap
-
