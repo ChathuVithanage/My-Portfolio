@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="calStyle.css">
+    <style>
+        .cal_container{
+            max-width: 400px;
+            margin: 10vh auto 0 auto;
+            box-shadow: 0px 0px 43px 17px rgb(100, 100, 1);
+        }
+        #display{
+            text-align: right;
+            height: 70px;
+            line-height: 70px;
+            padding: 16px 8px;
+            font-size: 25px;
+        }
+        .buttons{
+            display: grid;
+            border-bottom: 1px solid #999;
+            border-left: 1px solid #999;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .buttons > div{
+            border-top: 1px solid #999;
+            border-right: 1px solid #999;
+        }
+        .button{
+            border: 0.5px solid #999;
+            line-height: 100px;
+            text-align: center;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        #equal{
+            background-color: #2d8049;
+            color: white;
+        }
+        .button:hover{
+            background-color: darkslateblue;
+            color: white;
+            transition: 0.5s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="cal_container">
+            <div id="display"></div>
+            <div class="buttons">
+                <div class="button">C</div>
+                <div class="button">/</div>
+                <div class="button">*</div>
+                <div class="button">&larr;</div>
+                <div class="button">7</div>
+                <div class="button">8</div>
+                <div class="button">9</div>
+                <div class="button">-</div>
+                <div class="button">4</div>
+                <div class="button">5</div>
+                <div class="button">6</div>
+                <div class="button">+</div>
+                <div class="button">1</div>
+                <div class="button">2</div>
+                <div class="button">3</div>
+                <div class="button">.</div>
+                <div class="button">(</div>
+                <div class="button">0</div>
+                <div class="button">)</div>
+                <div id="equal" class="button">=</div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+       let display = document.getElementById('display');
+
+       let buttons = Array.from(document.getElementsByClassName('button'));
+
+       buttons.map(button =>{
+            button.addEventListener('click', (e) => {
+                switch (e.target.innerText){
+                    case 'C':
+                        display.innerText ='';
+                        break;
+                    case '←':
+                        display.innerText = display.innerText.slice(0,-1);
+                        break;
+                    default:
+                        display.innerText += e.target.innerText;
+                }
+            })
+       })
+    </script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
