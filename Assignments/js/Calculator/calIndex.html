@@ -66,7 +66,9 @@
     <section class="cals">
         <div class="cal_container">
             <div id="display"></div>
-            <div class="button_c">C</div>
+            <div class="btn">
+                <div class="button_c">C</div>
+            </div>
             <div class="buttons">
 
                 <div class="button">7</div>
@@ -90,22 +92,27 @@
                 <div class="button">*</div>
             </div>
         </div>
-
     </section>
 
     <script>
        let display = document.getElementById('display');
 
        let buttons = Array.from(document.getElementsByClassName('button'));
+       let btn = Array.from(document.getElementsByClassName('button_c'));
 
-       let button_c = document.getElementsByClassName('button');
+       btn.map(button_c =>{
+           button_c.addEventListener('click', (e) => {
+               switch (e.target.innerText) {
+                   case 'C':
+                       display.innerText ='';
+                       break;
+               }
+           })
+       })
 
        buttons.map(button =>{
             button.addEventListener('click', (e) => {
                 switch (e.target.innerText){
-                    case 'C':
-                        display.innerText ='';
-                        break;
                     case '=':
                         try {
                             display.innerText = eval(display.innerText);
@@ -118,8 +125,11 @@
                         display.innerText += e.target.innerText;
                 }
             })
+
        })
     </script>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
 </body>
 </html>
