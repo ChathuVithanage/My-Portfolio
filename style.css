@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -597,6 +599,32 @@ ol h1:before{
     top: 49%;
     left: 64%;
 }
+.box_e{
+    width: 15%;
+    height: 40%;
+    filter: drop-shadow(8px 8px 10px gray);
+    position: absolute;
+    background-image: linear-gradient(black,#545353,#827f7f,#c2bebe,white,white);
+    top: 37%;
+    left: 82%;
+}
+
+.box_e h4{
+    position: absolute;
+    font-size: 16px;
+    top: 8%;
+    align-self: center;
+    left: 10%;
+    color: white;
+}
+
+
+/*add sub menu*/
+
+
+
+
+
 .book{
     position: absolute;
     left: 28%;
@@ -843,9 +871,6 @@ ol h1:before{
     40%{background-image: url("https://i.ibb.co/Jm83vjD/1663356337990.jpg")}
     80%{background-image: url("https://i.ibb.co/GdXh0cj/1663356337972.jpg")}
 }
-
-
-
 
 /*contact section*/
 .contact{
