@@ -8,203 +8,120 @@
     <link rel="stylesheet" href="assets/Css/Style.css" />
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #566f7d">
 
+<!--header-->
+<header class="jumbotron bg-dark text-danger p-2">
+    <h1 class="position-absolute" id="nav"></h1>
+    <ul class="list-group list-group-horizontal text-danger  font-weight-bold">
+        <li class="list-group-item bg-white" id="lnkHome"><a  href="../POS/index.html" id="home">Home</a>
+        </li>
+        <li class="list-group-item bg-white" id="lnkCustomer"><a href="customerForm.html" id="customer" >Customer</a></li>
+        <li class="list-group-item bg-white" id="lnkItem"><a href="itemForm.html" id="item">Item</a></li>
+        <li class="list-group-item bg-white" id="lnkOrders"><a href="orderForm.html" id="order">Orders</a></li>
+    </ul>
+</header>
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav" >
-            <li class="nav-item active" >
-                <a class="nav-link" href="index.html"  style="color: black; font-size: large; font-weight: bold">
-                    <H>Home</H>
-                    <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="customerForm.html" style="font-weight: bold; font-size: large; color: black">
-                    Customer</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="itemForm.html" style="color: black; font-size: large; font-weight: bold">
-                    Item</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="orderForm.html" style="color: black; font-size: large; font-weight: bold">
-                    Place Order</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<main class="container-fluid" id="itemContent">
+    <section class="row-2">
+        <div class="col">
+            <div class="text-center pb-4"><h1>Add Item</h1></div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card p-2 m-5" >
-                <div class="card-header" style="background-color: #75CE8E; color: white; font-weight: bold">
-                    Search Item
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="txtItemCode">Item Code</label>
+                        <input class="form-control" id="txtItemCode" type="text">
+                        <span class="control-error" id="lblCode"></span>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input
-                                class="form-control mr-sm-2"
-                                type="search"
-                                placeholder="Input Item Name/Id"
-                                aria-label="Search"
-                                style="width: 700px; margin-bottom: 10px"
-                        />
-                        <button
-                                class="btn btn-outline-success my-2 my-sm-0"
-                                type="submit"
-                        >
-                            Search
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="btn-group mt-2" style="float: right">
-                <button
-                        type="button"
-                        class="btn btn-success"
-                        data-toggle="modal"
-                        data-target="#exampleModal"
-                >
-                    New Item
-                </button>
-                <div
-                        class="modal fade"
-                        id="exampleModal"
-                        tabindex="-1"
-                        role="dialog"
-                        aria-labelledby="exampleModalLabel"
-                        aria-hidden="true"
-                >
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div
-                                    class="modal-header"
-                                    style="background-color: blue; color: white"
-                            >
-                                <h5 class="modal-title" id="exampleModalLabel">New Item</h5>
-                                <button
-                                        type="button"
-                                        class="close"
-                                        data-dismiss="modal"
-                                        aria-label="Close"
-                                >
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Item Name</label>
-                                        <input
-                                                type="email"
-                                                class="form-control"
-                                                id="exampleInputEmail"
-                                                aria-describedby="emailHelp"
-                                                placeholder="Item Name"
-                                        />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Item Price</label>
-                                        <input
-                                                type="email"
-                                                class="form-control"
-                                                id="exampleInputEmail1"
-                                                aria-describedby="emailHelp"
-                                                placeholder="Item Price"
-                                        />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Quantity</label>
-                                        <input
-                                                type="password"
-                                                class="form-control"
-                                                id="exampleInputPassword1"
-                                                placeholder="Quantity"
-                                        />
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button
-                                        type="button"
-                                        class="btn btn-secondary"
-                                        data-dismiss="modal"
-                                >
-                                    Close
-                                </button>
-                                <button type="button" class="btn btn-primary">Save</button>
-                            </div>
-                        </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="txtItemName">Item Name</label>
+                        <input class="form-control" id="txtItemName" type="text">
+                        <span class="control-error" id="lblname"></span>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div>
-        <div
-                style="margin-top: 50px; text-align: left; display: block"
-                class="ml-4"
-        >
-            <button id="delBuCu" type="button" class="btn btn-danger">
-                Delete
-            </button>
-            <button type="button" id="cusE" class="btn btn-warning">Edit</button>
-            <button type="button" id="cusD" class="btn btn-info">Details</button>
-            <button class="btn btn-success">Clear</button>
-        </div>
-    </div>
-
-    <!--First row-->
-    <div class="row">
-        <div class="container-fluid" style="margin-top: 50px">
-            <div class="col">
-                <table class="table table-striped table-hover">
-                    <thead class="table-light sticky-top">
-                    <tr>
-                        <th scope="col">Item Code</th>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quntity</th>
-                        <th scope="col">Options</th>
-                    </tr>
-                    </thead>
-                    <tbody class="">
-                    <tr>
-                        <td>IT01</td>
-                        <td>Noodles</td>
-                        <td>RS. 300/=</td>
-                        <td>15</td>
-                        <td>Delete</td>
-                    </tr>
-                    <tr>
-                        <td>IT02</td>
-                        <td>milk</td>
-                        <td>RS. 460/=</td>
-                        <td>100</td>
-                        <td>Delete</td>
-                    </tr>
-
-                    <tr>
-                        <td>IT03</td>
-                        <td>biscuit</td>
-                        <td>RS. 300/=</td>
-                        <td>500</td>
-                        <td>Delete</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="txtItemQty">Item Qty</label>
+                        <input class="form-control" id="txtItemQty" type="text">
+                        <span class="control-error" id="lblqty"></span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="txtItemPrice">Unit Price</label>
+                        <input class="form-control" id="txtItemPrice" type="text">
+                        <span class="control-error" id="lblprice"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-group pb-3">
+                <button class="btn btn-secondary" id="btnItem">Add</button>
+                <button class="btn btn-danger ml-2" id="btnItemUpdate">Update</button>
+                <button class="btn btn-warning ml-2" id="btnItemDelete">Remove</button>
+                <button class="btn btn-success ml-2">Get All</button>
             </div>
         </div>
-    </div>
-</div>
+
+        <div class="col-8">
+            <table class="table table-secondary table-hover">
+                <thead class="text-black">
+                <tr>
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Item Qty</th>
+                    <th>Item Price</th>
+                </tr>
+                </thead>
+                <tbody id="tblItem">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
 
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-3.4.1.min.js"></script>
+
+<script>
+
+    var itemArray = []
+
+    function saveItem(){
+
+        let itemCode = $("#txtItemCode").val();
+        let itemName = $("#txtItemName").val();
+        let itemQty = $("#txtItemQty").val();
+        let unitPrice = $("#txtItemPrice").val();
+        var itemObject = {itemCode,itemName,itemQty,unitPrice}
+
+        itemArray.push(itemObject)
+        console.log(itemArray)
+    }
+
+    $("#btnItem").click(function () {
+        alert("saved")
+        saveItem()
+        loadItem()
+    })
+
+
+    function loadItem() {
+        $("#tblItem").empty();
+
+        for (var i of itemArray){
+            var raw = `<tr><td>${i.itemCode}</td><td>${i.itemName}</td><td>${i.itemQty}</td><td>${i.unitPrice}</td></tr>`
+            $("#tblItem").append(raw);
+        }
+    }
+
+
+</script>
 
 </body>
 </html>

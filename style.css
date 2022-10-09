@@ -604,7 +604,7 @@ ol h1:before{
     height: 40%;
     filter: drop-shadow(8px 8px 10px gray);
     position: absolute;
-    background-image: linear-gradient(black,#545353,#827f7f,#c2bebe,white,white);
+    background-image: linear-gradient(#b6d9a7,#e6f7bc, #f0f2b8,white,white);
     top: 37%;
     left: 82%;
 }
@@ -615,14 +615,24 @@ ol h1:before{
     top: 8%;
     align-self: center;
     left: 10%;
-    color: white;
+    color: saddlebrown;
 }
-
-
+.CSS{
+    width: 85%;
+    height: 8%;
+    top: 25%;
+    left: 5%;
+    position: absolute;
+    background-color: mediumseagreen;
+}
+.CSS h1{
+    position: absolute;
+    font-family: "Arial Rounded MT Bold";
+    font-size: medium;
+    color: black;
+    left: 5%;
+}
 /*add sub menu*/
-
-
-
 
 
 .book{
