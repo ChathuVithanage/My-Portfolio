@@ -634,6 +634,7 @@ ol h1:before{
 }
 /*add sub menu*/
 .mytabs {
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
