@@ -110,7 +110,7 @@
         loadItem()
     })
 
-
+    //load item
     function loadItem() {
         $("#tblItem").empty();
 
@@ -118,6 +118,14 @@
             var raw = `<tr><td>${i.itemCode}</td><td>${i.itemName}</td><td>${i.itemQty}</td><td>${i.unitPrice}</td></tr>`
             $("#tblItem").append(raw);
         }
+    }
+
+    //clear inputField
+    function clear(){
+        $('#txtCustomerId').val('')
+        $('#txtCustomerName').val('')
+        $('#txtCustomerAddress').val('')
+        $('#txtCustomerSalary').val('')
     }
 
 

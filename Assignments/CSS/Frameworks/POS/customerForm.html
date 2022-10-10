@@ -50,9 +50,9 @@
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="txtCustomerSalry">Customer Salary</label>
-                        <input class="form-control" id="txtCustomerSalry" type="text">
-                        <span class="control-error" id="lblcussalary"></span>
+                        <label for="txtCustomerSalary">Customer Salary</label>
+                        <input class="form-control" id="txtCustomerSalary" type="text">
+                        <span class="control-error" id="lblCusSalary"></span>
                     </div>
                 </div>
             </div>
@@ -102,8 +102,6 @@
         customerArray.push(customerObject)
         console.log(customerArray)
 
-        loadCustomer()
-        bindRowClickEvents();
     }
 
     $("#btnCustomer").click(function () {
@@ -111,6 +109,7 @@
         saveCustomer()
         loadCustomer()
         bindRowClickEvents()
+        setTestifiedValues()
     })
 
     //load customer
@@ -128,8 +127,6 @@
     });
 
     //table row val select
-
-
     function bindRowClickEvents() {
         $("#tblCustomer>tr").click(function () {
             let id = $(this).children(":eq(0)").text();
@@ -145,36 +142,106 @@
         });
     }
 
+    //clear inputField
+    function clear(){
+        $('#txtCustomerId').val('')
+        $('#txtCustomerName').val('')
+        $('#txtCustomerAddress').val('')
+        $('#txtCustomerSalary').val('')
+    }
+
     //search customer
-    // SEARCH CUSTOMER
-    $('#search').click(function(){
-        let typedId = $("#customer-search").val();
-        let customer = searchCustomer(typedId);
-        if (customer != null) {
-            $('#txtcustomerId').val(customer.cusID)
-            $('#txtcustomerName').val(customer.cusName)
-            $('#txtcustomerAddress').val(customer.cusAddress)
-            $('#txtcustomerSalary').val(customer.cusSalary)
-        } else {
-            Swal.fire("There is no cusotmer available for that " + typedId)
-            setTextfieldValues("", "", "", "");
+    $("#txtCustomerID").on('keyup', function (event) {
+        if (event.code == "Enter") {
+            let typedId = $("#txtCustomerID").val();
+            let customer = searchCustomer(typedId);
+            if (customer != null) {
+                setTestifiedValues(customer.cusID, customer.cusName, customer.cusAddress, customer.cusSalary);
+            } else {
+                alert("There is no customer available for that " + typedId);
+                setTestifiedValues("", "", "", "");
+            }
         }
-    })
+    });
 
     function searchCustomer(cusID) {
-        for (let customer of customers) {
+        for (let customer of customerArray) {
             if (customer.cusID == cusID) {
                 return customer;
-                console.log(customer)
             }
         }
         return null;
     }
 
+    function setTestifiedValues(id, name, address, salary) {
+        $("#txtCustomerID").val(id);
+        $("#txtCustomerName").val(name);
+        $("#txtCustomerAddress").val(address);
+        $("#txtCustomerSalary").val(salary);
+    }
+
+
+
     //update customer
-    function updateCustomer(){
+    $('#btnCusUpdate').click(function(){
+        let customerId=$('#txtCustomerID').val()
+        let response=updateCustomer(customerId)
+        if(response){
+            Swal.fire({
+                title: 'Customer Updated Successfully',
+            })
+            $('#txtCustomerID').val('')
+            $('#txtCustomerName').val('')
+            $('#txtCustomerAddress').val('')
+            $('#txtCustomerSalary').val('')
+        }
+        else{
+            Swal.fire("Update Failed..!" )
+        }
+    })
+
+    function updateCustomer(cusID) {
+        let customer = searchCustomer(cusID);
+        if (customer != null) {
+            customer.cusID = $("#txtCustomerID").val();
+            customer.cusName = $("#txtCustomerName").val();
+            customer.cusAddress = $("#txtCustomerAddress").val();
+            customer.cusSalary = $("#txtCustomerSalary").val();
+            loadCustomer();
+            clear()
+            setTestifiedValues()
+            return true;
+        } else {
+            return false;
+        }
 
     }
+
+    //remove customer
+    function deleteCustomer(customerID) {
+        let customer = searchCustomer(customerID);
+        if (customer != null) {
+            let indexNumber = customerArray.indexOf(customer);
+            customerArray.splice(indexNumber, 1);
+            loadCustomer();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $("#btnCusDelete").click(function () {
+        let deleteID = $("#txtCustomerID").val();
+
+        let del = confirm("Do you really want to delete customer id :" + deleteID);
+        if (del){
+            if (deleteCustomer(deleteID)) {
+                setTestifiedValues("", "", "", "");
+            } else {
+                alert("No such customer to delete. please check the id");
+            }
+        }
+    });
 
 
 
