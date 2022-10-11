@@ -657,7 +657,7 @@ ol h1:before{
 
 .mytabs .tab {
     position: relative;
-    width: 99%;
+    width: 97%;
     padding: 2px;
     background: #fff;
     order: 1;
@@ -674,6 +674,96 @@ ol h1:before{
 .mytabs input[type="radio"]:checked + label {
     background: #fff;
 }
+.tab ul li a{
+    color: deeppink;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Arial Rounded MT Bold";
+}
+.tab ul li a:hover{
+    color: dodgerblue;
+}
+.tab ul li {
+    padding: 5px 25px;
+    display: inline-block;
+    list-style-type: none;
+    height: 30%;
+}
+
+/*assignment tab-2*/
+.Js{
+    width: 85%;
+    height: 8%;
+    top: 58%;
+    left: 5%;
+    position: absolute;
+    background-color: mediumseagreen;
+}
+.Js h1{
+    position: absolute;
+    font-family: "Arial Rounded MT Bold";
+    font-size: medium;
+    color: black;
+    left: 5%;
+}
+
+.mytabs-2 {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: 16%;
+    margin: 30px auto;
+    padding: 3px;
+    top: 15%;
+}
+.mytabs-2 input[type="radio"] {
+    position: absolute;
+    display: none;
+}
+.mytabs-2 label {
+    position: relative;
+    padding : 2px 13px 3px 13px;
+    background: #e2e2e2;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.mytabs-2 .tab_a {
+    position: relative;
+    width: 97%;
+    padding: 2px;
+    background: #fff;
+    order: 1;
+    display: none;
+}
+.mytabs-2 .tab_a h2 {
+    font-size: 3em;
+}
+
+.mytabs-2 input[type='radio']:checked + label + .tab_a {
+    display: block;
+}
+
+.mytabs-2 input[type="radio"]:checked + label {
+    background: #fff;
+}
+.tab_a ul li a{
+    color: deeppink;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Arial Rounded MT Bold";
+}
+.tab_a ul li a:hover{
+    color: dodgerblue;
+}
+.tab_a ul li {
+    padding: 5px 25px;
+    display: inline-block;
+    list-style-type: none;
+    height: 30%;
+}
+
 
 .book{
     position: absolute;
