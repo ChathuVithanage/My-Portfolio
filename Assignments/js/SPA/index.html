@@ -97,15 +97,15 @@
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="txtCustomerSalry">Customer Salary</label>
-                        <input class="form-control" id="txtCustomerSalry" type="text">
+                        <label for="txtCustomerSalary">Customer Salary</label>
+                        <input class="form-control" id="txtCustomerSalary" type="text">
                         <span class="control-error" id="lblcussalary"></span>
                     </div>
                 </div>
             </div>
             <div class="btn-group pb-3">
                 <button class="btn btn-secondary " id="btnCustomer">Save</button>
-                <button class="btn btn-danger ml-2" id="btnUpdate">Update</button>
+                <button class="btn btn-danger ml-2" id="btnCusUpdate">Update</button>
                 <button class="btn btn-warning ml-2" id="btnCusDelete">Remove</button>
                 <button class="btn btn-success ml-2">Get All</button>
             </div>
@@ -139,15 +139,15 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="itemCode">Item Code</label>
-                        <input class="form-control" id="itemCode" type="text">
+                        <label for="txtItemCode">Item Code</label>
+                        <input class="form-control" id="txtItemCode" type="text">
                         <span class="control-error" id="lblCode"></span>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="itemName">Item Name</label>
-                        <input class="form-control" id="itemName" type="text">
+                        <label for="txtItemName">Item Name</label>
+                        <input class="form-control" id="txtItemName" type="text">
                         <span class="control-error" id="lblname"></span>
                     </div>
                 </div>
@@ -155,15 +155,15 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="itemQty">Item Qty</label>
-                        <input class="form-control" id="itemQty" type="text">
+                        <label for="txtItemQty">Item Qty</label>
+                        <input class="form-control" id="txtItemQty" type="text">
                         <span class="control-error" id="lblqty"></span>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="itemPrice">Unit Price</label>
-                        <input class="form-control" id="itemPrice" type="text">
+                        <label for="txtItemPrice">Unit Price</label>
+                        <input class="form-control" id="txtItemPrice" type="text">
                         <span class="control-error" id="lblprice"></span>
                     </div>
                 </div>
@@ -265,7 +265,7 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label>Item Code :</label>
-                                            <input class="form-control" id="txtItemCode" type="text">
+                                            <input class="form-control" id="itemCode" type="text">
                                         </div>
                                     </div>
                                     <div class="col-5">
@@ -277,7 +277,7 @@
                                     <div class="col-4">
                                         <div class="form-group">
                                             <label class="">Price :</label>
-                                            <input class="form-control" id="txtItemPrice" type="text">
+                                            <input class="form-control" id="itemPrice" type="text">
                                         </div>
                                     </div>
                                     <div class="col-3">
@@ -374,39 +374,12 @@
     </div>
 </main>
 
-
+<script src="db/db.js"></script>
 <script src="assets/js/jquery-3.4.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="Controller/customerController.js"></script>
+<script src="Controller/dashboardController.js"></script>
+<script src="Controller/itemController.js"></script>
 
-<script>
-
-    $("#home").click(function () {
-        $("#dashboardContent").css('display','block');
-        $("#customerContent").css('display','none');
-        $("#itemContent").css('display','none');
-        $("#orderContent").css('display','none');
-    });
-
-    $("#customer").click(function () {
-        $("#dashboardContent").css('display','none');
-        $("#customerContent").css('display','block');
-        $("#itemContent").css('display','none');
-        $("#orderContent").css('display','none');
-    });
-
-    $("#item").click(function () {
-        $("#dashboardContent").css('display','none');
-        $("#customerContent").css('display','none');
-        $("#itemContent").css('display','block');
-        $("#orderContent").css('display','none');
-    });
-
-    $("#order").click(function () {
-        $("#dashboardContent").css('display','none');
-        $("#customerContent").css('display','none');
-        $("#itemContent").css('display','none');
-        $("#orderContent").css('display','block');
-    });
-</script>
 </body>
 </html>
