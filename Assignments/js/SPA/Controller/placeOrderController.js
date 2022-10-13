@@ -1,4 +1,4 @@
-var order=[];
+var orderArray=[];
 
 //for customer
 function loadAllCustomersInOrder() {
@@ -63,10 +63,45 @@ function setValuesToItem(itemName, unitPrice, itemQty) {
 
 }
 
+
+
 function addItemToCart(){
       let iCode = $("#selectItemCode").val();
       let iName = $("#txtItemDescription").val();
       let iPrice = $("#itemPrice").val();
       let iQty = $("#txtQty").val();
-      let total = $("#itemPrice").val();
+      let total = $("#txtTotal").val();
+
+      var cartObject ={iCode, iName, iPrice, iQty, total}
+      orderArray.push(cartObject)
+      console.log(orderArray)
+}
+
+$("#btnAddToTable").click(function () {
+      addItemToCart()
+      loadItemToCart()
+      clearOrderQty()
+});
+
+//add to cart table
+function loadItemToCart(){
+    $("#orderTable").empty();
+
+    for (var a of orderArray){
+        var cart = `<tr><td>${a.iCode}</td><td>${a.iName}</td><td>${a.iPrice}</td><td>${a.iQty}</td><td>${a.total}</td></tr>`
+        $("#orderTable").append(cart);
+    }
+}
+
+
+     $('#txtQty').keyup(function(){
+        let price = $('#itemPrice').val()
+        let orderQty = $('#txtQty').val();
+        let total= price * orderQty;
+        $('#txtTotal').val(total);
+    });
+
+//clear orderQty textField
+function clearOrderQty(){
+    $('#txtQty').val('')
 }
