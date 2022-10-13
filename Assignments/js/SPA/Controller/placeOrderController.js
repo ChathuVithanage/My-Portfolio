@@ -93,15 +93,20 @@ function loadItemToCart(){
     }
 }
 
-
-     $('#txtQty').keyup(function(){
-        let price = $('#itemPrice').val()
-        let orderQty = $('#txtQty').val();
-        let total= price * orderQty;
-        $('#txtTotal').val(total);
-    });
+//Calculate Total
+$('#txtQty').keyup(function(){
+    let price = $('#itemPrice').val()
+    let orderQty = $('#txtQty').val();
+    let total= price * orderQty;
+    $('#txtTotal').val(total);
+});
 
 //clear orderQty textField
 function clearOrderQty(){
     $('#txtQty').val('')
 }
+
+//calculate final Total
+function calFinalTot() {
+}
+
