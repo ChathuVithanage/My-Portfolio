@@ -112,7 +112,7 @@
 
         </div>
         <div class="col-8">
-            <table class="table table-secondary table-hover">
+            <table class="table table table-bordered table-secondary table-hover">
                 <thead class="text-black">
                 <tr>
                     <th>Customer ID</th>
@@ -225,8 +225,10 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label for="orderCustomerID">Customer ID</label>
-                                            <input class="form-control" id="orderCustomerID">
+                                            <label>Customer ID :</label>
+                                            <select class="form-control" id="selectCusId"></select>
+                                            <span class="control-error"
+                                                  id="customer-empty-error"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -256,16 +258,10 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label>Item :</label>
+                                            <label>Item code :</label>
                                             <select class="form-control" id="selectItemCode"></select>
                                             <span class="control-error"
                                                   id="item-empty-error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>Item Code :</label>
-                                            <input class="form-control" id="itemCode" type="text">
                                         </div>
                                     </div>
                                     <div class="col-5">
@@ -282,7 +278,7 @@
                                     </div>
                                     <div class="col-3">
                                         <div class="form-group">
-                                            <label class="">QtyOnH :</label>
+                                            <label class="">Qty On Hand :</label>
                                             <input class="form-control" id="txtQTYOnHand" type="text">
                                         </div>
                                     </div>
@@ -291,7 +287,7 @@
                                     <div class="col-12 mt-4">
                                         <div class="form-group">
                                             <label>Order Quantity :</label>
-                                            <input class="form-control" id="txtQty" min="1" type="number">
+                                            <input class="form-control" id="txtQty" min="1" type="text">
                                             <span class="control-error" id="order-qty-empty-error"></span>
                                         </div>
                                     </div>
@@ -311,8 +307,8 @@
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col-12">
-                                        <span class="text-dark font-weight-bold" id="total-text">Total : </span>
-                                        <span class="font-weight-bold ml-3 text-danger" id="total">00.0</span> Rs
+                                        <label>Total :</label>
+                                        <input class="form-control" id="txtTotal" type="text">
                                     </div>
                                 </div>
 
@@ -380,6 +376,7 @@
 <script src="Controller/customerController.js"></script>
 <script src="Controller/dashboardController.js"></script>
 <script src="Controller/itemController.js"></script>
+<script src="Controller/placeOrderController.js"></script>
 
 </body>
 </html>

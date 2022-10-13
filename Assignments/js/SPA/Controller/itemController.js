@@ -10,6 +10,8 @@ function saveItem(){
 
     itemArray.push(itemObject)
     console.log(itemArray)
+
+    loadAllItemsInOrder()
 }
 
 $("#btnItem").click(function () {
@@ -83,7 +85,7 @@ function setTestifiedValues(code, name, qty, price) {
     $("#txtItemPrice").val(price);
 }
 
-//update customer
+//update item
 $('#btnItemUpdate').click(function(){
     let itemCode=$('#txtItemCode').val()
     let it=updateItem(itemCode)

@@ -12,6 +12,7 @@ function saveCustomer(){
     customerArray.push(customerObject)
     console.log(customerArray)
 
+    loadAllCustomersInOrder()
 }
 
 $("#btnCustomer").click(function () {
@@ -20,6 +21,7 @@ $("#btnCustomer").click(function () {
     loadCustomer()
     bindRowClickEvents()
     setTestifiedValues()
+    cleartextField()
 })
 
 //load customer
@@ -53,11 +55,12 @@ function bindRowClickEvents() {
 }
 
 //clear inputField
-function clear(){
-    $('#txtCustomerId').val('')
+function cleartextField(){
+    $('#txtCustomerID').val('')
     $('#txtCustomerName').val('')
     $('#txtCustomerAddress').val('')
     $('#txtCustomerSalary').val('')
+
 }
 
 //search customer
@@ -149,4 +152,6 @@ $("#btnCusDelete").click(function () {
             alert("No such customer to delete. please check the id");
         }
     }
+
+    clear()
 });
