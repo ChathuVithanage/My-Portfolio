@@ -221,13 +221,14 @@
                                             <label>Date :</label>
                                             <input class="form-control" id="txtDate" type="date">
                                         </div>
-                                    </div>
+                                    </div>f
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label>Customer ID :</label>
-                                            <select class="form-control" id="selectCusId"></select>
+                                            <select class="form-control" id="selectCusId" onchange="selectCustomer()">
+                                                <option value="none" selected>Choose</option></select>
                                             <span class="control-error"
                                                   id="customer-empty-error"></span>
                                         </div>
@@ -260,7 +261,9 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label>Item code :</label>
-                                            <select class="form-control" id="selectItemCode"></select>
+                                            <select class="form-control" id="selectItemCode" onchange="selectItem()">
+                                                <option value="none" selected>Choose</option>
+                                            </select>
                                             <span class="control-error"
                                                   id="item-empty-error"></span>
                                         </div>
@@ -366,7 +369,7 @@
 </main>
 
 <!--orderDetails-->
-<main class="container-fluid" id="orderDetails">
+<main class="container-fluid" id="orderDetails" style="display: none">
     <section class="row-3">
 
         <div class="col">
@@ -377,7 +380,9 @@
         <div class="col-4">
             <div class="form-group">
                 <label>Order Id :</label>
-                <select class="form-control" id="selectOrderId"></select>
+                <select class="form-control" id="selectOrderId" onchange="loadOrderDetails()">
+                    <option value="none" selected>Choose</option>
+                </select>
                 <span class="control-error"
                       id="order-empty-error"></span>
             </div>

@@ -2,19 +2,19 @@ var orderArray=[];
 
 //for customer
 function loadAllCustomersInOrder() {
-    $("#selectCusId").empty();
+    //$("#selectCusId").empty();
     for (let cus of customerArray) {
         $("#selectCusId").append(`<option>${cus.cusID}</option>`);
     }
 }
 
 //combobox on action to customer
-$("#selectCusId").click(function() {
+function selectCustomer() {
      let typedId = $("#selectCusId").val();
      let cus = searchCustomerForOrder(typedId);
 
         setValues( cus.cusName, cus.cusAddress);
-});
+}
 
 function searchCustomerForOrder(cusID) {
     for (let cus of customerArray) {
@@ -33,19 +33,19 @@ function setValues(name, address) {
 
 //select to item
 function loadAllItemsInOrder() {
-    $("#selectItemCode").empty();
+    //$("#selectItemCode").empty();
     for (let item of itemArray) {
         $("#selectItemCode").append(`<option>${item.itemCode}</option>`);
     }
 }
 
 //combobox on action to customer
-$("#selectItemCode").click(function() {
+function selectItem() {
      let typedId = $("#selectItemCode").val();
      let item = searchItemsForOrder(typedId);
 
         setValuesToItem( item.itemName , item.unitPrice, item.itemQty);
-});
+}
 
 function searchItemsForOrder(itemCode) {
     for (let item of itemArray) {

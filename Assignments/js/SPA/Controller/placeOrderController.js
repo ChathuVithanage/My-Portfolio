@@ -5,7 +5,14 @@ function saveOrder(){
     let date = $('#txtDate').val()
     let item = orderArray
 
-    var order = {orderID, cusId, cusName, date, item}
+    let total = 0;
+    orderArray.forEach(cartItem => {
+        let found = itemArray.find(item => {return item.itemCode == cartItem.iCode})
+        found.itemQty =  found.itemQty - cartItem.iQty
+        total = total + parseInt(cartItem.total)
+    })
+
+    var order = {orderID, cusId, cusName, date, item, total}
     orderDetails.push(order)
 
     loadAllOrderId()
@@ -17,11 +24,12 @@ $('#btnSubmitOrder').click(function(){
     clearOrderForm()
     $('#txtOrderID').val(calculateNextId())
 
+
 });
 
 //load orderId
 function loadAllOrderId() {
-    $("#selectOrderId").empty();
+   // $("#selectOrderId").empty();
     for (let or of orderDetails) {
         $("#selectOrderId").append(`<option>${or.orderID}</option>`);
     }
@@ -64,26 +72,45 @@ function calculateNextId() {
 //load table_1
 function loadOrders_1() {
     $("#orderDetails_1").empty();
+    $("#orderDetails_2").empty();
 
-    for (var or1 of orderDetails){
-        var row = `<tr><td>${or1.date}</td><td>${or1.cusId}</td><td>${or1.cusName}</td><td>${or1.finalTot}</td></tr>`
+    let oid = $("#selectOrderId").val()
+
+    let foundOrder = orderDetails.find(order => { return order.orderID == oid})
+
+        var row = `<tr><td>${foundOrder.date}</td><td>${foundOrder.cusId}</td><td>${foundOrder.cusName}</td><td>${foundOrder.total}</td></tr>`
         $("#orderDetails_1").append(row);
-    }
+
+    foundOrder.item.forEach(or2 => {
+        var row = `<tr><td>${or2.iCode}</td><td>${or2.iName}</td><td>${or2.iPrice}</td><td>${or2.iQty}</td><td>${or2.total}</td></tr>`
+        $("#orderDetails_2").append(row);
+    })
+
 }
 
 //load table_2
 function loadOrders_2() {
-    $("#orderDetails_2").empty();
+
 
     for (var or2 of orderArray){
-        var row = `<tr><td>${or2.iCode}</td><td>${or2.iName}</td><td>${or2.iPrice}</td><td>${or2.iQty}</td><td>${or2.total}</td></tr>`
-        $("#orderDetails_2").append(row);
+
     }
 }
 
-$("#selectOrderId").click(function() {
+function loadOrderDetails() {
+    console.log("this runs")
     loadOrders_1()
     loadOrders_2()
-})
+}
+
+//final total
+
+
+
+
+
+
+
+
 
 
