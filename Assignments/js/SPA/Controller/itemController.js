@@ -19,7 +19,7 @@ $("#btnItem").click(function () {
     saveItem()
     loadItem()
     bindRowClickEvents()
-    setTestifiedValues()
+    setTestifiedValuesItem()
 })
 
 //load item
@@ -61,10 +61,10 @@ $("#txtItemCode").on('keyup', function (event) {
         let typedId = $("#txtItemCode").val();
         let item = searchItem(typedId);
         if (item != null) {
-            setTestifiedValues(item.itemCode, item.itemName, item.itemQty, item.unitPrice);
+            setTestifiedValuesItem(item.itemCode, item.itemName, item.itemQty, item.unitPrice);
         } else {
             alert("There is no item available for that " + typedId);
-            setTestifiedValues("", "", "", "");
+            setTestifiedValuesItem("", "", "", "");
         }
     }
 });
@@ -78,7 +78,7 @@ function searchItem(itemCode) {
     return null;
 }
 
-function setTestifiedValues(code, name, qty, price) {
+function setTestifiedValuesItem(code, name, qty, price) {
     $("#txtItemCode").val(code);
     $("#txtItemName").val(name);
     $("#txtItemQty").val(qty);
@@ -112,7 +112,7 @@ function updateItem(itemCode) {
         item.unitPrice = $("#txtItemPrice").val();
         loadItem();
         clear()
-        setTestifiedValues()
+        setTestifiedValuesItem()
         return true;
     } else {
         return false;
@@ -139,7 +139,7 @@ $("#btnItemDelete").click(function () {
     let del = confirm("Do you want to delete item :" + deleteCode);
     if (del){
         if (deleteItem(deleteCode)) {
-            setTestifiedValues("", "", "", "");
+            setTestifiedValuesItem("", "", "", "");
         } else {
             alert("No such item to delete. please check the id");
         }

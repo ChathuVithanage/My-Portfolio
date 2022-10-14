@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Anton');
 
 *{
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', Arial Rounded MT Bold;
 }
 
 #customerContent,#itemContent,#orderContent{
