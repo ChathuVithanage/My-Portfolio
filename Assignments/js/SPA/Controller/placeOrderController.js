@@ -16,6 +16,7 @@ function saveOrder(){
     orderDetails.push(order)
 
     loadAllOrderId()
+    $('#txtFinalTotal').val(total);
 
 }
 
@@ -23,7 +24,6 @@ $('#btnSubmitOrder').click(function(){
     saveOrder()
     clearOrderForm()
     $('#txtOrderID').val(calculateNextId())
-
 
 });
 

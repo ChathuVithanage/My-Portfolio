@@ -1,4 +1,4 @@
 var customerArray = []
 var itemArray = []
-var order=[];
+var orderArray=[];
 var orderDetails=[];

@@ -81,6 +81,8 @@ $("#btnAddToTable").click(function () {
       addItemToCart()
       loadItemToCart()
       clearOrderQty()
+    setOrderTblValues()
+    bindOrderRowClickEvents()
 });
 
 //add to cart table
@@ -106,7 +108,67 @@ function clearOrderQty(){
     $('#txtQty').val('')
 }
 
-//calculate final Total
-function calFinalTot() {
+//calculate balance
+$('#txtCash').on('keydown',function(event){
+    if(event.key=='Enter'){
+        let tot=  $('#txtFinalTotal').val();
+        let cash=$('#txtCash').val()
+        let balance=cash-tot;
+        $('#txtBalance').val(balance)
+
+    }
+})
+
+function bindOrderRowClickEvents() {
+    $("#orderTable>tr").click(function () {
+        let code = $(this).children(":eq(0)").text();
+        let itName = $(this).children(":eq(1)").text();
+        let itPrice = $(this).children(":eq(2)").text();
+        let itQty = $(this).children(":eq(3)").text();
+        let itTotal = $(this).children(":eq(4)").text();
+
+        $('#txtTblCode').val(code);
+        $('#txtTblName').val(itName);
+        $('#txtTblPrice').val(itPrice);
+        $('#txtTblQty').val(itQty);
+        $('#txtTblTotal').val(itTotal);
+
+    });
 }
 
+function setOrderTblValues(code, itName, itPrice, itQty, itTotal) {
+    $("#txtTblCode").val(code);
+    $("#txtTblName").val(itName);
+    $("#txtTblPrice").val(itPrice);
+    $("#txtTblQty").val(itQty);
+    $("#txtTblTotal").val(itTotal);
+}
+
+function deleteOrder(code){
+        let indexNumber = orderArray.indexOf(code);
+        orderArray.splice(indexNumber, 1);
+        loadItemToCart()
+}
+
+$("#btnOrderDelete").click(function () {
+    let deleteOID = $("#txtTblCode").val();
+
+    let delve = confirm("Do you really want to delete customer id :" + deleteOID);
+    if (delve){
+        if (deleteOrder(deleteOID)) {
+            setOrderTblValues("", "", "", "","");
+        } else {
+            alert("No such customer to delete. please check the id");
+        }
+    }
+    clearOrderItem()
+
+});
+
+function clearOrderItem(){
+    $("#txtTblCode").val('');
+    $("#txtTblName").val('');
+    $("#txtTblPrice").val('');
+    $("#txtTblQty").val('');
+    $("#txtTblTotal").val('');
+}

@@ -157,9 +157,8 @@ $("#btnCusDelete").click(function () {
 
 //validation
 
- /*   $("#txtCustomerID").focus();
+     $("#txtCustomerID").focus();
 
-    // customer reguler expressions
     const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
     const cusNameRegEx = /^[A-Z][a-z]{3,15}.[A-Z][a-z]{3,15}$/;
     const cusAddressRegEx = /^[A-z ]{3,60}$/;
@@ -176,17 +175,16 @@ $("#btnCusDelete").click(function () {
     $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").on('keydown', function (event) {
     if (event.key == "Tab") {
     event.preventDefault();
-}
-});
-
+                            }
+    });
 
     $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").on('keyup', function (event) {
     checkValidity();
-});
+    });
 
     $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").on('blur', function (event) {
     checkValidity();
-});
+    });
 
 function checkValidity() {
     let errorCount=0;
@@ -239,4 +237,4 @@ function setButtonState(value){
         }else{
     $("#btnCustomer").attr('disabled',false);
     }
-}*/
+}

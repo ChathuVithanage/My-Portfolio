@@ -145,3 +145,87 @@ $("#btnItemDelete").click(function () {
         }
     }
 });
+
+//validation
+
+$("#txtItemCode").focus();
+
+const itemIDRegEx = /^(I00-)[0-9]{1,3}$/;
+const itemNameRegEx = /^[a-z]{3,20}$/;
+const itemQtyRegEx = /^[0-9]{1,}$/;
+const unitPriceRegEx = /^[0-9]{1,}$/;
+
+let itemValidations = [];
+itemValidations.push({reg: itemIDRegEx, field: $('#txtItemCode')});
+itemValidations.push({reg: itemNameRegEx, field: $('#txtItemName'),error:''});
+itemValidations.push({reg: itemQtyRegEx, field: $('#txtItemQty'),error:''});
+itemValidations.push({reg: unitPriceRegEx, field: $('#txtItemPrice'),error:''});
+
+
+//disable key
+$("#txtItemCode,#txtItemName,#txtItemQty,#txtItemPrice").on('keydown', function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
+
+$("#txtItemCode,#txtItemName,#txtItemQty,#txtItemPrice").on('keyup', function (event) {
+    checkItemValidity();
+});
+
+$("#txtItemCode,#txtItemName,#txtItemQty,#txtItemPrice").on('blur', function (event) {
+    checkItemValidity();
+});
+
+function checkItemValidity() {
+    let errorCount=0;
+    for (let validation of itemValidations) {
+        if (check(validation.reg,validation.field)) {
+            textItemSuccess(validation.field,"");
+        } else {
+            errorCount=errorCount+1;
+            setItemTextError(validation.field,validation.error);
+        }
+    }
+    setButtonState(errorCount);
+}
+
+function checkItems(regex, txtField) {
+    let inputValue = txtField.val();
+    return regex.test(inputValue) ? true : false;
+}
+
+function setItemTextError(txtField,error) {
+    if (txtField.val().length <= 0) {
+        defaultText(txtField,"");
+    } else {
+        txtField.css('border', '2px solid red');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+function textItemSuccess(txtField,error) {
+    if (txtField.val().length <= 0) {
+        defaultItemText(txtField,"");
+    } else {
+        txtField.css('border', '2px solid green');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+function defaultItemText(txtField,error) {
+    txtField.css("border", "1px solid #ced4da");
+    txtField.parent().children('span').text(error);
+}
+
+function focusText(txtField) {
+    txtField.focus();
+}
+
+function setButtonState(value){
+    if (value>0){
+        $("#btnCustomer").attr('disabled',true);
+    }else{
+        $("#btnCustomer").attr('disabled',false);
+    }
+}
