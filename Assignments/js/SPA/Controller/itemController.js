@@ -224,8 +224,8 @@ function focusText(txtField) {
 
 function setButtonState(value){
     if (value>0){
-        $("#btnCustomer").attr('disabled',true);
+        $("#btnItem").attr('disabled',true);
     }else{
-        $("#btnCustomer").attr('disabled',false);
+        $("#btnItem").attr('disabled',false);
     }
 }
