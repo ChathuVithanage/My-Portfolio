@@ -160,11 +160,11 @@ nav ul li a:hover{
 
 /*2nd section*/
 .About{
-    background-color: #A4A4A4;
     width: 100%;
     height: 100vh;
+    background-size: cover;
     position: relative;
-    background-image: linear-gradient(gray,#e3e3e3,white,white,white,white,white);
+
 }
 /*.description{
     top: 40px;
@@ -193,10 +193,10 @@ nav ul li a:hover{
     top: 22%;
 }
 .my{
-    height: 60%;
-    width: 30%;
+    height: 70%;
+    width: 23%;
     position: absolute;
-    left: 40px;
+    left: 60px;
     bottom: 25px;
     border-radius: 10%;
 }
@@ -286,17 +286,21 @@ ol h1:before{
 .qualification{
     width: 100%;
     height: 100vh;
+    background-size: cover;
     position: relative;
+
 
 }
 .topic > h1{
     position: absolute;
+    color: white;
     top: 18px;
     left: 45%;
     font-family: IM FELL French Canon;
     font-size: 25px;
 }
 .line{
+    color: white;
     border-left: 2px solid black;
     height: 430px;
     top: 80px;
@@ -333,7 +337,7 @@ ol h1:before{
     position: absolute;
     width: 100%;
     height: 17%;
-    background-color: #bcc1d4;
+    background-color: #4771b5;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -675,7 +679,7 @@ ol h1:before{
     background: #fff;
 }
 .tab ul li a{
-    color: deeppink;
+    color: black;
     font-weight: bold;
     text-decoration: none;
     font-family: "Arial Rounded MT Bold";
@@ -689,6 +693,8 @@ ol h1:before{
     list-style-type: none;
     height: 30%;
 }
+
+
 
 /*assignment tab-2*/
 .Js{
@@ -1008,8 +1014,11 @@ ol h1:before{
 }
 @keyframes slider {
     0%{background-image: url("https://i.ibb.co/PNF5pcq/1663356337955.jpg")}
+    20%{background-image: url("https://i.ibb.co/D9CrPS7/1679575724953.jpg")}
     40%{background-image: url("https://i.ibb.co/Jm83vjD/1663356337990.jpg")}
+    60%{background-image: url("https://i.ibb.co/7jxdJQQ/1687229070395.jpg"  )}
     80%{background-image: url("https://i.ibb.co/GdXh0cj/1663356337972.jpg")}
+
 }
 
 /*contact section*/
